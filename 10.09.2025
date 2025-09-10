@@ -1,0 +1,278 @@
+Student406-11@NPK101O-3 MINGW64 ~
+$ cd
+
+Student406-11@NPK101O-3 MINGW64 ~
+$ cd
+
+Student406-11@NPK101O-3 MINGW64 ~
+$ cd C://Users/Student406-11/source/repos/MAUI
+
+Student406-11@NPK101O-3 MINGW64 ~/source/repos/MAUI
+$ git config --global user.name TimMax
+
+Student406-11@NPK101O-3 MINGW64 ~/source/repos/MAUI
+$ git config --global user.email timmax@gmail.com
+
+Student406-11@NPK101O-3 MINGW64 ~/source/repos/MAUI
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Users/Student406-11/AppData/Local/Programs/Git/mingw64/etc/ssl
+/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=TimMax
+user.email=timmax@gmail.com
+
+Student406-11@NPK101O-3 MINGW64 ~/source/repos/MAUI
+$ git init
+Initialized empty Git repository in C:/Users/Student406-11/source/repos/MAUI/.gi
+t/
+
+Student406-11@NPK101O-3 MINGW64 ~/source/repos/MAUI (master)
+$ git add calculator
+fatal: pathspec 'calculator' did not match any files
+
+Student406-11@NPK101O-3 MINGW64 ~/source/repos/MAUI (master)
+$ git add MAUI.sln
+
+Student406-11@NPK101O-3 MINGW64 ~/source/repos/MAUI (master)
+$ git add Program.cs
+
+Student406-11@NPK101O-3 MINGW64 ~/source/repos/MAUI (master)
+$ git add bin
+
+Student406-11@NPK101O-3 MINGW64 ~/source/repos/MAUI (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   MAUI.sln
+        new file:   Program.cs
+        new file:   bin/Debug/net8.0/MAUI.deps.json
+        new file:   bin/Debug/net8.0/MAUI.dll
+        new file:   bin/Debug/net8.0/MAUI.exe
+        new file:   bin/Debug/net8.0/MAUI.pdb
+        new file:   bin/Debug/net8.0/MAUI.runtimeconfig.json
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .vs/
+        MAUI.csproj
+        obj/
+
+
+Student406-11@NPK101O-3 MINGW64 ~/source/repos/MAUI (master)
+$ git commit -m "All working"
+[master (root-commit) b825898] All working
+ 7 files changed, 113 insertions(+)
+ create mode 100644 MAUI.sln
+ create mode 100644 Program.cs
+ create mode 100644 bin/Debug/net8.0/MAUI.deps.json
+ create mode 100644 bin/Debug/net8.0/MAUI.dll
+ create mode 100644 bin/Debug/net8.0/MAUI.exe
+ create mode 100644 bin/Debug/net8.0/MAUI.pdb
+ create mode 100644 bin/Debug/net8.0/MAUI.runtimeconfig.json
+
+$ git remote add origin url http://192.168.20.11:3000/wsr02-406/Azhbakov_Patrin.git
+usage: git remote add [<options>] <name> <url>
+
+    -f, --[no-]fetch      fetch the remote branches
+    --[no-]tags           import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --[no-]track <branch>
+                          branch(es) to track
+    -m, --[no-]master <branch>
+                          master branch
+    --[no-]mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+
+Student406-11@NPK101O-3 MINGW64 ~/source/repos/MAUI (master)
+$ git remote add origin http://192.168.20.11:3000/wsr02-406/Azhbakov_patrin.git
+
+Student406-11@NPK101O-3 MINGW64 ~/source/repos/MAUI (master)
+$ git remote add origin http://192.168.20.11:3000/wsr02-406/Azhbakov_Patrin.git
+error: remote origin already exists.
+
+Student406-11@NPK101O-3 MINGW64 ~/source/repos/MAUI (master)
+$ git remote
+origin
+
+Student406-11@NPK101O-3 MINGW64 ~/source/repos/MAUI (master)
+$ git remote -v
+origin  http://192.168.20.11:3000/wsr02-406/Azhbakov_patrin.git (fetch)
+origin  http://192.168.20.11:3000/wsr02-406/Azhbakov_patrin.git (push)
+
+Student406-11@NPK101O-3 MINGW64 ~/source/repos/MAUI (master)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'http://192.168.20.11:3000/wsr02-406/Azhbakov
+_patrin.git'
+
+Student406-11@NPK101O-3 MINGW64 ~/source/repos/MAUI (master)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'http://192.168.20.11:3000/wsr02-406/Azhbakov
+_patrin.git'
+
+Student406-11@NPK101O-3 MINGW64 ~/source/repos/MAUI (master)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'http://192.168.20.11:3000/wsr02-406/Azhbakov
+_patrin.git'
+
+Student406-11@NPK101O-3 MINGW64 ~/source/repos/MAUI (master)
+$ ^C
+
+Student406-11@NPK101O-3 MINGW64 ~/source/repos/MAUI (master)
+$ git pull origin master
+fatal: couldn't find remote ref master
+
+Student406-11@NPK101O-3 MINGW64 ~/source/repos/MAUI (master)
+$ git push -u origin master
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (12/12), 72.35 KiB | 8.04 MiB/s, done.
+Total 12 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: * Checking 1 references
+remote: Checked 1 references in total
+remote: . Processing 1 references
+remote: Processed 1 references in total
+To http://192.168.20.11:3000/wsr02-406/Azhbakov_patrin.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+Student406-11@NPK101O-3 MINGW64 ~/source/repos/MAUI (master)
+$ git pull origin master
+From http://192.168.20.11:3000/wsr02-406/Azhbakov_patrin
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+Student406-11@NPK101O-3 MINGW64 ~/source/repos/MAUI (master)
+$ git push origin master
+Everything up-to-date
+
+Student406-11@NPK101O-3 MINGW64 ~/source/repos/MAUI (master)
+$ git commit -m "Изменили метод Main"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .vs/
+        MAUI.csproj
+        obj/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Student406-11@NPK101O-3 MINGW64 ~/source/repos/MAUI (master)
+$ git add .
+error: open(".vs/MAUI/FileContentIndex/af2ecea9-e5a7-4862-9820-01ba55405114.vsid
+x"): Permission denied
+error: unable to index file '.vs/MAUI/FileContentIndex/af2ecea9-e5a7-4862-9820-0
+1ba55405114.vsidx'
+fatal: adding files failed
+
+Student406-11@NPK101O-3 MINGW64 ~/source/repos/MAUI (master)
+$ git add .vs
+error: open(".vs/MAUI/FileContentIndex/af2ecea9-e5a7-4862-9820-01ba55405114.vsid
+x"): Permission denied
+error: unable to index file '.vs/MAUI/FileContentIndex/af2ecea9-e5a7-4862-9820-0
+1ba55405114.vsidx'
+fatal: adding files failed
+
+Student406-11@NPK101O-3 MINGW64 ~/source/repos/MAUI (master)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Disable this message with "git config advice.addEmptyPathspec false"
+
+Student406-11@NPK101O-3 MINGW64 ~/source/repos/MAUI (master)
+$ git add .
+error: open(".vs/MAUI/FileContentIndex/af2ecea9-e5a7-4862-9820-01ba55405114.vsid
+x"): Permission denied
+error: unable to index file '.vs/MAUI/FileContentIndex/af2ecea9-e5a7-4862-9820-0
+1ba55405114.vsidx'
+fatal: adding files failed
+
+Student406-11@NPK101O-3 MINGW64 ~/source/repos/MAUI (master)
+$ echo ".vs/" >> .gitignore
+
+Student406-11@NPK101O-3 MINGW64 ~/source/repos/MAUI (master)
+$ git add .
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the ne
+xt time Git touches it
+
+Student406-11@NPK101O-3 MINGW64 ~/source/repos/MAUI (master)
+$ git commit -m "Изменили метод Main"
+[master a6a41f4] Изменили метод Main
+ 22 files changed, 254 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 MAUI.csproj
+ create mode 100644 obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes
+.cs
+ create mode 100644 obj/Debug/net8.0/MAUI.AssemblyInfo.cs
+ create mode 100644 obj/Debug/net8.0/MAUI.AssemblyInfoInputs.cache
+ create mode 100644 obj/Debug/net8.0/MAUI.GeneratedMSBuildEditorConfig.editorcon
+fig
+ create mode 100644 obj/Debug/net8.0/MAUI.GlobalUsings.g.cs
+ create mode 100644 obj/Debug/net8.0/MAUI.assets.cache
+ create mode 100644 obj/Debug/net8.0/MAUI.csproj.BuildWithSkipAnalyzers
+ create mode 100644 obj/Debug/net8.0/MAUI.csproj.CoreCompileInputs.cache
+ create mode 100644 obj/Debug/net8.0/MAUI.csproj.FileListAbsolute.txt
+ create mode 100644 obj/Debug/net8.0/MAUI.dll
+ create mode 100644 obj/Debug/net8.0/MAUI.genruntimeconfig.cache
+ create mode 100644 obj/Debug/net8.0/MAUI.pdb
+ create mode 100644 obj/Debug/net8.0/apphost.exe
+ create mode 100644 obj/Debug/net8.0/ref/MAUI.dll
+ create mode 100644 obj/Debug/net8.0/refint/MAUI.dll
+ create mode 100644 obj/MAUI.csproj.nuget.dgspec.json
+ create mode 100644 obj/MAUI.csproj.nuget.g.props
+ create mode 100644 obj/MAUI.csproj.nuget.g.targets
+ create mode 100644 obj/project.assets.json
+ create mode 100644 obj/project.nuget.cache
+
+Student406-11@NPK101O-3 MINGW64 ~/source/repos/MAUI (master)
+$ git commit -m "Изменили метод Main"
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Student406-11@NPK101O-3 MINGW64 ~/source/repos/MAUI (master)
+$ git push
+Enumerating objects: 28, done.
+Counting objects: 100% (28/28), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (23/23), done.
+Writing objects: 100% (27/27), 76.12 KiB | 7.61 MiB/s, done.
+Total 27 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: * Checking 1 references
+remote: Checked 1 references in total
+remote: . Processing 1 references
+remote: Processed 1 references in total
+To http://192.168.20.11:3000/wsr02-406/Azhbakov_patrin.git
+   b825898..a6a41f4  master -> master
+
+Student406-11@NPK101O-3 MINGW64 ~/source/repos/MAUI (master)
+$ git pull
+Already up to date.
+
+Student406-11@NPK101O-3 MINGW64 ~/source/repos/MAUI (master)
+$
