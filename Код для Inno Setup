@@ -1,0 +1,21 @@
+[Setup]
+AppName=Таймер с авторизацией
+AppVersion=1.0
+DefaultDirName={autopf}\CountdownTimer
+OutputBaseFilename=CountdownTimer_Setup
+Compression=lzma
+SolidCompression=yes
+PrivilegesRequired=admin
+
+[Languages]
+Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl"
+
+[Files]
+Source: "C:\Users\пользо\source\repos\CountdownTimer\CountdownTimer\bin\Release\net8.0-windows\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
+
+[Icons]
+Name: "{autodesktop}\Таймер"; Filename: "{app}\CountdownTimer.exe"
+Name: "{autoprograms}\Таймер"; Filename: "{app}\CountdownTimer.exe"
+
+[Run]
+Filename: "{app}\CountdownTimer.exe"; Description: "Запустить приложение"; Flags: postinstall nowait skipifsilent
