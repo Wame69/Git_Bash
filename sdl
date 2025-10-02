@@ -1,0 +1,59 @@
+#include <SDL3/SDL.h>
+#include <SDL3/SDL_image.h>
+#include <iostream>
+
+const int SCREEN_WIDTH = 640;
+const int SCREEN_HEIGHT = 480;
+
+int main(int argc, char** argv) {
+    if (SDL_Init(SDL_INIT_VIDEO) < 0) {
+        std::cerr << "SDL Init Error: " << SDL_GetError() << std::endl;
+        return 1;
+    }
+
+    SDL_Window* win = SDL_CreateWindow("SDL3 PNG test", SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_RESIZABLE);
+    if (!win) {
+        std::cerr << "Window Error: " << SDL_GetError() << std::endl;
+        return 1;
+    }
+
+    SDL_Renderer* ren = SDL_CreateRenderer(win, nullptr);
+    if (!ren) {
+        std::cerr << "Renderer Error: " << SDL_GetError() << std::endl;
+        return 1;
+    }
+
+    SDL_Texture* tex = IMG_LoadTexture(ren, "flower.png");
+    if (!tex) {
+        std::cerr << "IMG_LoadTexture Error: " << SDL_GetError() << std::endl;
+        return 1;
+    }
+
+    bool running = true;
+    SDL_Event e;
+
+    while (running) {
+        while (SDL_PollEvent(&e)) {
+            if (e.type == SDL_EVENT_QUIT) {
+                running = false;
+            }
+        }
+
+        SDL_SetRenderDrawColor(ren, 0, 0, 0, 255);
+        SDL_RenderClear(ren);
+
+        int w, h;
+        SDL_GetWindowSize(win, &w, &h);
+        SDL_FRect dst = { 0, 0, (float)w, (float)h };
+
+        SDL_RenderTexture(ren, tex, nullptr, &dst);
+        SDL_RenderPresent(ren);
+    }
+
+    SDL_DestroyTexture(tex);
+    SDL_DestroyRenderer(ren);
+    SDL_DestroyWindow(win);
+
+    SDL_Quit();
+    return 0;
+}
